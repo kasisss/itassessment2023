@@ -29,7 +29,7 @@ class Header extends HTMLElement {
 class Nav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <nav>
+        <nav id = "nav">
         <div class="navigation">
           <a href = "/">
           <img  src="./assets/images/logo.png" alt="logo" />
@@ -38,7 +38,8 @@ class Nav extends HTMLElement {
             <li><a href="/index.html">Home</a></li>
             <li><a href="/about.html">About Us</a></li>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/products.html">Products</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/blog.html">Blog</a></li>
           </ul>
         </div>
         <div class="icons">
@@ -108,8 +109,18 @@ class Head extends HTMLElement {
   }
 }
 
-
 customElements.define("main-header", Header);
 customElements.define("main-footer", Footer);
 customElements.define("main-nav", Nav);
 customElements.define("main-head", Head);
+
+function setActive() {
+  aObj = document.getElementById("nav").getElementsByTagName("a");
+  for (i = 0; i < aObj.length; i++) {
+    if (document.location.href.indexOf(aObj[i].href) >= 0) {
+      aObj[i].className = "active";
+    }
+  }
+}
+
+window.onload = setActive;
