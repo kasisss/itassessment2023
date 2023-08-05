@@ -17,18 +17,55 @@
       <section class="gallery__section">
         <div class="divider"></div>
         <div class="images">
-          <img src="./assets/images/gallery/0.jpeg" alt="" />
-          <img src="./assets/images/gallery/1.jpeg" alt="" />
-          <img src="./assets/images/gallery/2.jpeg" alt="" />
-          <img src="./assets/images/gallery/3.jpeg" alt="" />
-          <img src="./assets/images/gallery/4.jpeg" alt="" />
-          <img src="./assets/images/gallery/5.jpeg" alt="" />
-          <img src="./assets/images/gallery/6.jpeg" alt="" />
-          <img src="./assets/images/gallery/7.jpeg" alt="" />
+          <div class="image">
+            <img src="./assets/images/gallery/0.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/1.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/2.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/3.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/4.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/5.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/6.jpeg" alt="" />
+          </div>
+          <div class="image">
+            <img src="./assets/images/gallery/7.jpeg" alt="" />
+          </div>
         </div>
       </section>
+      <div class="popup_image">
+        <span style="color: #fff">&times;</span>
+        <img src="./assets/images/gallery/0.jpeg" alt="" />
+      </div>
     </main>
     <main-footer></main-footer>
     <script src="./index.js"></script>
+
+    <!-- script for popup images -->
+    <script>
+      document.querySelectorAll(".images img").forEach((image) => {
+        image.onclick = () => {
+          document.querySelector(".popup_image").style.display = "block";
+          document.querySelector(".popup_image img").src =
+            image.getAttribute("src");
+        };
+      });
+
+      document
+        .querySelector(".popup_image span")
+        .addEventListener("click", () => {
+          document.querySelector(".popup_image").style.display = "none";
+        });
+    </script>
   </body>
 </html>
