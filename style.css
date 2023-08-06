@@ -80,8 +80,19 @@ header::after {
 
 /* product header */
 .product-header {
-  background-image: url("./assets/images/main.jpeg");
+  background-image: url("./assets/images/products/0.jpeg");
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
+
+.product-header .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
 
 /* gallery header */
 .gallery-header {
@@ -452,6 +463,10 @@ section {
   cursor: pointer;
 }
 
+.products__section {
+  padding: 40px 0;
+}
+
 .products__section h1 {
   text-align: center;
   font-family: var(--hero-title);
@@ -462,7 +477,7 @@ section {
 
 .products__section .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 }
 
@@ -597,4 +612,8 @@ footer .icons p {
 
 footer .icons p:hover {
   scale: 1.02;
+}
+
+.error {
+  color: red;
 }

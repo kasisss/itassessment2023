@@ -5,6 +5,7 @@ $(document).ready(() => {
     var last_name = $("#last_name").val();
     var email = $("#email").val();
     var phone = $("#phone").val();
+    var messages = $("#messages").val();
 
     $(".error").remove();
 
@@ -23,8 +24,7 @@ $(document).ready(() => {
     if (email.length < 1) {
       $("#email").after('<span class="error">This field is required</span>');
     } else {
-      var regEx =
-        /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+      var regEx = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
       var validEmail = regEx.test(email);
       if (!validEmail) {
         $("#email").after('<span class="error">Enter a valid email</span>');
@@ -36,6 +36,15 @@ $(document).ready(() => {
         '<span class="error">phone must be at least 8 characters long</span>'
       );
     }
-  });
+    if (messages.length < 1) {
+      $("#messages").after(
+        '<span class="error">message must be at least 1 characters long</span>'
+      );
+    }
 
+    if (!$(".error").length) {
+      alert("Hurray you are validated");
+      $("#form").trigger("reset");
+    }
+  });
 });
