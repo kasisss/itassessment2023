@@ -10,12 +10,15 @@
   --header-paragraph: "Lovers Quarrel", cursive;
   --header-font-size: 54px;
   --header-content-paragraph: 40px;
-  --section-width: 90%;
-  --nav-width: 90%;
+  --section-width: 100%;
+  --nav-width: 100%;
   --hero-title: "Kaushan Script", cursive;
   --btn-bg-color: #b7faac;
   --footer-bg-color: #373030;
   --contact-header: "Crete Round", serif;
+
+  --max-width: 1320px;
+  --width: 100%;
 }
 
 html {
@@ -89,10 +92,21 @@ header::after {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
+/* portfolio header */
 
+.portfolio-header {
+  background-image: url("https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.portfolio-header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* gallery header */
 .gallery-header {
@@ -110,7 +124,7 @@ header::after {
 }
 
 .gallery__section {
-  padding: 40px 0 0 0;
+  padding: 40px 0;
 }
 
 .gallery__section .divider {
@@ -327,7 +341,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: var(--nav-width);
+  width: 90%;
+  /* width: var(--nav-width); */
   margin: 0 auto;
   background: transparent;
 }
@@ -399,6 +414,7 @@ main {
 }
 
 section {
+  max-width: var(--max-width);
   width: var(--section-width);
   margin: 0 auto;
 }
@@ -564,7 +580,8 @@ footer {
 }
 
 footer > div {
-  width: var(--section-width);
+  width: 90%;
+  /* width: var(--section-width); */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -616,4 +633,28 @@ footer .icons p:hover {
 
 .error {
   color: red;
+}
+
+.routine__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.routine__section h1 {
+  font-family: var(--header-title);
+  font-size: var(--paragraph-font-size);
+  border: 1px solid #000;
+  padding: 10px 20px;
+}
+
+.routine__section a {
+  width: fit-content;
+  display: inline-block;
+  transition: 0.4s ease-in-out;
+}
+
+.routine__section a:hover {
+  text-decoration: underline;
 }
