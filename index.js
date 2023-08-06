@@ -58,18 +58,27 @@ class Footer extends HTMLElement {
         <footer>
         <div>
           <div class="content">
-            <p>
-              Copyright &copy; 2023 All Rights Reserved | <br />
-              Made by Kasis Panta
-            </p>
-          </div>
+        
+            <p>Address: Mahalaxmi-07,Lalitpur</p>    
+            <p>Email: Kasis7@gmail.com</p>
+            <p>Phone: 9844171953</p>      
+            </div>
           <div class="img__container">
             <img src="./assets/images/logo.png" alt="logo" />
           </div>
+          <div style = "display:flex;flex-direction:column;gap:50px;">
           <div class="icons">
+          <p><a style = "color:#fff;" href= "https://github.com/kasisss"><i class="ri-github-fill"></i></a> </p>
             <p><i class="ri-facebook-fill"></i></p>
             <p><i class="ri-twitter-fill"></i></p>
             <p><i class="ri-instagram-fill"></i></p>
+          </div>
+          <div>
+          <p>
+          Copyright &copy; 2023 All Rights Reserved |
+          Made by Kasis Panta
+        </p>
+          </div>
           </div>
         </div>
       </footer>

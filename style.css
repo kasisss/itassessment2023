@@ -50,7 +50,7 @@ header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -75,7 +75,7 @@ header::after {
 }
 
 #contact-header {
-  background-image: url("./assets/images/main.jpeg");
+  background-image: url("https://images.unsplash.com/photo-1515173522882-fa8de74f27f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80");
 }
 
 /* product header */
@@ -85,7 +85,7 @@ header::after {
 
 /* gallery header */
 .gallery-header {
-  background-image: url("./assets/images/main.jpeg");
+  background-image: url("https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80");
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -96,6 +96,10 @@ header::after {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.gallery__section {
+  padding: 40px 0 0 0;
 }
 
 .gallery__section .divider {
@@ -153,7 +157,7 @@ header::after {
 
 /* blog header */
 .blog-header {
-  background-image: url("./assets/images/main.jpeg");
+  background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -214,11 +218,15 @@ header::after {
   gap: 15px;
 }
 
+.description h2 {
+  font-size: 28px;
+}
+
 .contact-header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65%;
+  height: 60%;
   font-family: var(--hero-title);
   color: #baaaaa;
 }
@@ -310,9 +318,7 @@ nav {
   align-items: center;
   width: var(--nav-width);
   margin: 0 auto;
-  /* position: absolute;
-  inset: 0;
-  top: 50px; */
+  background: transparent;
 }
 
 nav .navigation {
@@ -578,6 +584,17 @@ footer .content {
 footer > div .icons {
   display: flex;
   gap: 10px;
-  font-size: var(--paragraph-font-size);
   justify-content: end;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccccccaf;
+}
+
+footer .icons p {
+  font-size: 22px;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+footer .icons p:hover {
+  scale: 1.02;
 }
